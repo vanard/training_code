@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_restaurant_app/colors.dart';
+import 'package:food_restaurant_app/widgets/big_text.dart';
+import 'package:food_restaurant_app/widgets/small_text.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,8 +24,22 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Column(
                   children: [
-                    Text("Restaurant"),
-                    Text("Location"),
+                    BigText(
+                      text: "Restaurant",
+                      color: AppColors.mainColor,
+                    ),
+                    Row(
+                      children: [
+                        SmallText(
+                          text: "Location",
+                          color: Colors.black54,
+                        ),
+                        Icon(
+                          Icons.arrow_drop_down_rounded,
+                          color: Colors.black54,
+                        ),
+                      ],
+                    ),
                   ],
                 ),
                 Center(
