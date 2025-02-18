@@ -10,6 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  get: ^4.7.2
+  dots_indicator: ^4.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
