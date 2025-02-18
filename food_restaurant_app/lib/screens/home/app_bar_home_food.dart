@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_restaurant_app/colors.dart';
+import 'package:food_restaurant_app/util/dimensions.dart';
 import 'package:food_restaurant_app/widgets/big_text.dart';
 import 'package:food_restaurant_app/widgets/small_text.dart';
 
@@ -15,8 +16,8 @@ class _AppBarHomeFoodState extends State<AppBarHomeFood> {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        margin: const EdgeInsets.only(top: 45, bottom: 15),
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        margin: EdgeInsets.only(top: Dimensions.dimen45, bottom: Dimensions.dimen15),
+        padding: EdgeInsets.symmetric(horizontal: Dimensions.dimen15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -42,11 +43,11 @@ class _AppBarHomeFoodState extends State<AppBarHomeFood> {
             ),
             Center(
               child: Container(
-                width: 45,
-                height: 45,
+                width: Dimensions.dimen45,
+                height: Dimensions.dimen45,
                 decoration: BoxDecoration(
                   color: AppColors.mainColor,
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(Dimensions.dimen15),
                 ),
                 child: Icon(
                   Icons.search,
