@@ -52,6 +52,7 @@ class _AppBarHomeFoodState extends State<AppBarHomeFood> {
                 child: Icon(
                   Icons.search,
                   color: Colors.white,
+                  size: Dimensions.font24,
                 ),
               ),
             ),
