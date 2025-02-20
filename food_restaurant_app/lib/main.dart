@@ -15,14 +15,16 @@ class MainApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // backgroundColor: Colors.blueAccent,
-        body: Column(
-          children: [
-            AppBarHomeFood(),
-            HomeFoodBody(),
-          ],
-        )
-      ),
+          // backgroundColor: Colors.blueAccent,
+          body: Column(
+        children: [
+          AppBarHomeFood(),
+          Expanded(
+              child: SingleChildScrollView(
+            child: HomeFoodBody(),
+          )),
+        ],
+      )),
     );
   }
 }
