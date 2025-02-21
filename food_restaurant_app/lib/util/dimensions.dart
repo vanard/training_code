@@ -11,6 +11,8 @@ class Dimensions {
   // 866.3 / 110 = 7.8754 (heightScreen / heightCard2)
   static double pagerViewTextContainerHeight = screenHeight / 7.21916;
 
+  static double foodDetailImageHeight = screenHeight / 2.4751;
+
 //dynamic height
   // static double height10 = screenHeight / 86.63;
   // static double height15 = screenHeight / 57.753;
