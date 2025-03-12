@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_restaurant_app/colors.dart';
 import 'package:food_restaurant_app/util/dimensions.dart';
+import 'package:food_restaurant_app/widgets/app_column.dart';
 import 'package:food_restaurant_app/widgets/app_icon.dart';
-import 'package:food_restaurant_app/widgets/icon_with_text.dart';
-import 'package:food_restaurant_app/widgets/small_text.dart';
+import 'package:food_restaurant_app/widgets/big_text.dart';
 
 class FoodDetailScreen extends StatelessWidget {
   const FoodDetailScreen({super.key});
@@ -11,6 +11,7 @@ class FoodDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           Positioned(
@@ -58,75 +59,39 @@ class FoodDetailScreen extends StatelessWidget {
                   topRight: Radius.circular(Dimensions.dimen20),
                 ),
               ),
-              child: Column(children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Corndog',
-                      style: TextStyle(
-                        fontSize: Dimensions.font24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      '\$5.00',
-                      style: TextStyle(
-                        fontSize: Dimensions.font24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Wrap(children: [
-                      ...List.generate(
-                          5,
-                          (index) => Icon(
-                                Icons.star,
-                                color: Colors.yellow,
-                                size: 16,
-                              )),
-                    ]),
-                    SizedBox(
-                      width: Dimensions.dimen10,
-                    ),
-                    SmallText(
-                      text: "4.5",
-                    ),
-                    SizedBox(
-                      width: Dimensions.dimen10,
-                    ),
-                    SmallText(text: "(112) Reviews"),
-                  ],
-                ),
-                SizedBox(
-                  height: Dimensions.dimen10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconWithText(
-                        icon: Icons.circle_sharp,
-                        text: "Normal",
-                        iconColor: AppColors.iconColor1),
-                    IconWithText(
-                      icon: Icons.location_on,
-                      text: "1.7 km",
-                      iconColor: AppColors.mainColor,
-                    ),
-                    IconWithText(
-                      icon: Icons.access_time_filled_rounded,
-                      text: "32 min",
-                      iconColor: AppColors.iconColor2,
-                    )
-                  ],
-                ),
-              ]),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AppColumn(text: "CornDog",),
+                  SizedBox(
+                    height: Dimensions.dimen20,
+                  ),
+                  BigText(text: "Introduce"),
+                  SizedBox(
+                    height: Dimensions.dimen15,
+                  ),
+
+                ],
+              ),
             ),
           )
         ],
+      ),
+      bottomNavigationBar: Container(
+        height: Dimensions.dimen100,
+        padding: EdgeInsets.only(
+          left: Dimensions.dimen20,
+          right: Dimensions.dimen20,
+          top: Dimensions.dimen20,
+          bottom: Dimensions.dimen10,
+        ),
+        decoration: BoxDecoration(
+          color: AppColors.buttonBackgroundColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(Dimensions.dimen35),
+            topRight: Radius.circular(Dimensions.dimen35),
+          ),
+        ),
       ),
     );
   }
